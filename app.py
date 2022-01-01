@@ -92,7 +92,16 @@ def attendees():
     teams=team.query.all()
     participant=participants.query.all()
     usr_list = []
-
+    participant_name=[]
+    participant_email=[]
+    participant_phone=[]
+    participant_organization=[]
+    participant_is_leader=[]
+    m=[]
+    n=[]
+    o=[]
+    p=[]
+    q=[]
     for u in teams:
         usr = {
                     'id': u.id,
@@ -100,19 +109,23 @@ def attendees():
                     'team_members': u.team_members,
                     'team_type': u.team_type,
                     'problem_statement': u.problem_statement,
-                    }
-        i=1
+        }
+        usr_list.append(usr)
+        
         for v in participant:
             if u.id==v.team_id:
-                usr['participant_name'+str(i)]=v.name
-                usr['participant_email'+str(i)]=v.email
-                usr['participant_phone'+str(i)]=v.phone
-                usr['participant_organization'+str(i)]=v.organization
-                usr['participant_is_leader'+str(i)]=v.is_leader
-            i=i+1
-        print(usr)
-        usr_list.append(usr)
-    return render_template("attendees.html",users=usr_list)
+                m.append(v.name)
+                n.append(v.email)
+                o.append(v.phone)
+                p.append(v.organization)
+                q.append(v.is_leader)
+        participant_name.append(m)
+        participant_email.append(n)
+        participant_phone.append(o)
+        participant_organization.append(p)
+        participant_is_leader.append(q)
+        
+    return render_template("attendees.html",users=usr_list, participant_name=participant_name,participant_email=participant_email,participant_phone=participant_phone,participant_organization=participant_organization,participant_is_leader=participant_is_leader)
 
 if __name__ == '__main__':
     app.run(debug=True)

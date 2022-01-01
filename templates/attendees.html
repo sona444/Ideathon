@@ -3,7 +3,25 @@
 {% block title %} Registered teams {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+<style>
+section.attendees{
+    background-size: cover;
+      background-image:url("{{url_for('static',filename='img/web_bg.png')}}")  ;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      color:#FFCCFF
+}
+table.abso{
+    width:86vw;
+    position:absolute;
+    background-color:#14072C;
+}
+th,td{
+    font-size:17px;
+}
+</style>
+{% endblock stylesheets %}
 
 {% block body_class %} landing-page {% endblock body_class %}
 
@@ -32,23 +50,22 @@
                 <tr class="fold">
                     <td>
                         <div class="fold-content">
-                        <table >
+                        <table class="abso">
                             <thead>
                             <tr>
-                                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
+                                <th>Participant name</th><th>Participant Email</th><th>Participant Phone Number</th><th>Organization</th><th>Is Leader</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>Sony</td>
-                                <td>13245</td>
-                                <td>John Doe</td>
-                                <td>064578</td>
-                                <td>A, 100%</td>
-                                <td class="cur">20000</td>
-                                <td class="cur">33000</td>
-                                <td class="cur">13000</td>
+                            {% for i in range(user.team_members|int) %}
+                                <td>{{participant_name[loop.index][i]}}</td>
+                                <td>{{participant_email[loop.index][i]}}</td>
+                                <td>{{participant_phone[loop.index][i]}}</td>
+                                <td>{{participant_organization[loop.index][i]}}</td>
+                                <td>{{participant_is_leader[loop.index][i]}}</td>
                             </tr>
+                            {% endfor %}
                             </tbody>
                         </table>
                     </div>
