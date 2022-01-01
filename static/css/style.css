@@ -22,7 +22,7 @@ nav{
     height:100vh;
 }
 .carousel-caption{
-    top:50%;
+    top:25%;
 }
 section.register-form{
     background-color:black;
@@ -174,26 +174,26 @@ h1 {
 
 
 .days {
-  background: #EF2F3C;
+  background: #A257BB;
 }
 
 .hours {
   background: #F6F4F3;
-  color: #183059;
+  color: #14072C;
 }
 
 .minutes {
-  background: #276FBF;
+  background: #FE65C3;
 }
 
 .seconds {
-  background: #F0A202;
-  
+  background: #FFCCFF;
+  color:#14072C;
 }
 
 .numbers {
   font-family: 'Montserrat', sans-serif;
-  color: #183059;
+  color: #14072C;
   font-size: 4em;
 }
 
@@ -207,19 +207,19 @@ h1 {
   }
 
 .red .triangle {
-    border-bottom: 14px solid #EF2F3C;
+    border-bottom: 14px solid #A257BB;
   }
   .red .string {
-    background: #EF2F3C;
-    border: 1px solid #EF2F3C;
+    background: #A257BB;
+    border: 1px solid #A257BB;
   }
 
 .blue .triangle {
-    border-bottom: 14px solid #276FBF;
+    border-bottom: 14px solid #FE65C3;
   }
   .blue .string {
-    background: #276FBF;
-    border: 1px solid #276FBF;
+    background: #FE65C3;
+    border: 1px solid #FE65C3;
   }
 .balloon {
   border: 1px solid #000;
@@ -292,7 +292,7 @@ h1 {
   height: 30px;
   margin-left: 51px;
   margin-top: -5px;
-  background: #EF2F3C;
+  background: #A257BB;
   -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
@@ -317,6 +317,9 @@ h1 {
   color:#ffccff;
 }
 @media (min-width:768px){
+  .timer{
+    background-image: url(../img/web_bg.png);
+  }
   .y{
     font-size: 75px;
   }
@@ -342,6 +345,7 @@ h1 {
     .navbar.fixed-top{
         padding-left:100px !important;
         padding-right: 100px !important;
+        width:100vw !important;
     }
     #ABOUT{
         padding:100px;
@@ -352,18 +356,18 @@ h1 {
         font-weight: 700;
         color:#ffccff;
     }
-    .mobile.carousel-inner{
+    /* .mobile.carousel-inner{
         display: none;
     }
     .carousel-inner{
         display:block;
-    }
+    } */
     #carouselExampleIndicators{
         display:block;
     }
     .blue {
         position: absolute;
-        background: #276FBF;
+        background: #FE65C3;
         height: 80px;
         width: 80px;
         left: 55%;
@@ -372,7 +376,7 @@ h1 {
       }
       .red {
         position: absolute;
-        background: #EF2F3C;
+        background: #A257BB;
         left: 24%;
         top: 16%;
         height: 65px;
@@ -398,9 +402,16 @@ h1 {
         margin-top: 14%;
         margin-bottom:120px;
     }
+    .wave{
+      position: absolute;
+      width: 50% !important;
+      /* height: 145px; */
+      top: 57px;
+      left: 23%;
+    }
     .timeline {
       background-image: url(../img/web.png);
-      height: 100vh;
+      height: 111vh;
       width: 100vw;
       background-size: cover !important ; 
 
@@ -419,26 +430,122 @@ h1 {
       background-image:url(../img/web_bg.png)  ;
       padding-top: 50px;
       padding-bottom: 50px;
+      
+      /* height:100vh;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-color: #03001D; */
+    }
+    .prize{
+      padding-bottom: 90px !important;
     }
     .pricebox{
       color: #DFBE9D;
-      padding-top: 100px;
+      padding-top: 39px;
       padding-bottom: 50px;
-            height: 300px;
+            height: 340px;
+            width:340px !important;
             line-height: 20px;
             border: double 5px #6F0B96;
             border-radius: 10cm;
             text-align: center;
             margin: 0px 50px;
-            
+      background-color: rgba(254, 101, 195,0.5);
             
          }
+         .pricebox h2{
+           font-size:32px;
+           font-weight: 600;
+         }
+         .pricebox h6{
+           font-size:22px;
+           font-weight: 600;
+         }
+         .about-title{
+           padding-bottom:90px !important;
+         }
+         .nav-link{
+           font-size:22px !important;
+           font-weight: 700;
+         }
+         .register-form{
+          background-size: cover;
+          background-image:url(../img/mob.png)  ;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
 }
 @media (max-width:768px){
   video{
     margin-top:122px !important;
     display:none;
   }
+  .register{
+    background-image: url(../img/mob.png);
+    background-size: cover !important;
+
+  }
+  .wave{
+    position: absolute;
+    width: 74% !important;
+    /* height: 145px; */
+    top: 81px;
+    left: 11%;
+  }
+  .mob-wave{
+    top:120px !important;
+  }
+  .about-title{
+    padding-bottom:25px !important;
+  }
+  .register-form{
+    background-size: cover;
+    background-image:url(../img/mob.png)  ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  #PRIZES{
+    background-size: cover;
+    background-image:url(../img/mob.png)  ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    /* height:100vh;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: #03001D; */
+  }
+  .timeline {
+    background-image: url(../img/Timeline-mob.png);
+    height: 73vh;
+    width: 100vw;
+    background-size: contain !important ;
+    background-repeat: no-repeat; 
+
+  }
+  .pricebox{
+    color: #DFBE9D;
+    padding-top: 39px;
+    padding-bottom: 50px;
+    margin-top: 10px !important;
+          height: 256px;
+          width:256px !important;
+          line-height: 20px;
+          border: double 5px #6F0B96;
+          border-radius: 50%;
+          text-align: center;
+          margin: 0px 50px;
+    background-color: rgba(254, 101, 195,0.5);
+          
+       }
+       .pricebox h2{
+         font-size:32px;
+         font-weight: 600;
+       }
+       .pricebox h6{
+         font-size:22px;
+         font-weight: 600;
+       }
   .first{
     background-image: url(../img/back-mobile.gif);
     height:100vh;
@@ -446,7 +553,7 @@ h1 {
     background-size: cover;
   }
   .logo-main{
-    width:122px !important;
+    width:200px !important;
   }
   .left{
     top:60%;
@@ -483,6 +590,7 @@ h1 {
         width: 95vw;
         font-size:0.6em;
         letter-spacing: 0px;
+        
     }
     .days, .hours, .minutes, .seconds {
         display: inline-block;
@@ -495,7 +603,7 @@ h1 {
     }
     .red {
         position: absolute;
-        background: #EF2F3C;
+        background: #A257BB;
         left: 8%;
         top: 3%;
         height: 65px;
@@ -514,7 +622,7 @@ h1 {
       }
       .blue {
         position: absolute;
-        background: #276FBF;
+        background: #FE65C3;
         height: 80px;
         width: 80px;
         left: 53%;
@@ -528,18 +636,24 @@ h1 {
     .navbar.fixed-top{
         padding-left:30px !important;
         height: auto;
-        background-color: black;
+        background-color: #030412;
         padding-right: 30px !important;
     }
-    .mobile.carousel-inner{
+    .carousel-caption h5{
+      font-size:38px !important;
+    }
+    .carousel-caption p{
+      font-size: 22px !important;
+    }
+    /* .mobile.carousel-inner{
         display: block;
     }
     .carousel-inner{
         display:none;
-    }
-    #carouselExampleIndicators{
+    } */
+    /* #carouselExampleIndicators{
         display:none;
-    }
+    } */
     .logo1{
         margin-left: 0px !important;
         margin-right: 0px !important;
@@ -558,12 +672,19 @@ h1 {
         font-weight: 700;
         color:#ffccff;
     }
-    
+    .timer{
+      background-image: url(../img/mob.png);
+      background-size: cover;
+    }
     #ABOUT{
         padding-top:50px;
+        background-image: url(../img/mob.png);
+      background-size: cover;
     }
     .reg-form{
         width:90% !important;
         margin-top:157px !important;
+        background-image: url(../img/mob.png);
+      background-size: cover;
     }
 }
