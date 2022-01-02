@@ -10,13 +10,10 @@ section.attendees{
       background-image:url("{{url_for('static',filename='img/web_bg.png')}}")  ;
       padding-top: 50px;
       padding-bottom: 50px;
-      color:#FFCCFF
+      color:#FFCCFF;
+      display:block;
 }
-table.abso{
-    width:86vw;
-    position:absolute;
-    background-color:#14072C;
-}
+
 th,td{
     font-size:17px;
 }
@@ -26,17 +23,17 @@ th,td{
 {% block body_class %} landing-page {% endblock body_class %}
 
 {% block content %}
-<section class="attendees" style="height:100vh;">
+<section class="attendees">
 <div class="container">
     <div class="row">
     <h1 style="margin-top:170px; text-align:center;font-weight:800; margin-bottom:50px;">Registered Candidates <i class="fas fa-users"></i></h1>
-        <table class="attendees-table fold-table" style="text-align:center;">
+        <table class="attendees-table" style="text-align:center; width:100vw;">
         <thead>
-            <th style="width:20%;">Team_ID</th>
-            <th style="width:20%;">Team Name</th>
-            <th style="width:20%;">Team Members</th>
-            <th style="width:20%;">Team Type</th>
-            <th style="width:20%;">Problem Statement</th>
+            <th>Team_ID</th>
+            <th>Team Name</th>
+            <th>Team Members</th>
+            <th>Team Type</th>
+            <th>Problem Statement</th>
         </thead>
         <tbody>
             {% for i in range(users|length) %}
@@ -59,31 +56,11 @@ th,td{
                         <td>{{participant_is_leader[i][j]}}</td>
                     </tr>
                 {% endfor %}            
-                <tr class="fold">
-                    <td>
-                        <div class="fold-content">
-                        <table class="abso">
-                            <thead>
-                            
-                            </thead>
-                            <tbody>
-                            
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-                </tr>
+                
             {% endfor %}
         </tbody>
         </table>
     </div>
 </div>
 </section>
-<script>
-    $(function(){
-        $(".fold-table tr.view").on("click", function(){
-            $(this).toggleClass("open").next(".fold").toggleClass("open");
-        });
-        });
-</script>
 {% endblock content %}

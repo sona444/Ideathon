@@ -133,15 +133,7 @@ footer{
     padding:10px;
     border-radius:10px;
 }
-.fold{
-    display:none;
-}
-.fold.open{
-    display:table;
-}
-tr.view{
-    cursor: pointer;
-}
+
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
 
 
