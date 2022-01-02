@@ -26,7 +26,7 @@
         <form id="register-form" style="margin-bottom:45px;">
         <input type="text" class="form-control"id="member" style="display:none;"value="{{members|int}}">
         <input type="text" class="form-control"id="idd" style="display:none;"value="{{id}}">
-        {% for i in range(1, members|int+1) %}
+        {% for i in range(1, members|int) %}
             <div class="mb-3">
                 <label for="Name" class="form-label">Team Member {{i}} Name</label>
                 <input type="text" class="form-control" id="tlname{{i-1}}" required>
