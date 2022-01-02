@@ -449,7 +449,7 @@ h1 {
             border: double 5px #6F0B96;
             border-radius: 10cm;
             text-align: center;
-            margin: 0px 50px;
+            margin: 10px auto;
       background-color: rgba(254, 101, 195,0.5);
             
          }
@@ -521,20 +521,20 @@ h1 {
     width: 100vw;
     background-size: contain !important ;
     background-repeat: no-repeat; 
+    background-color: #040713;
 
   }
   .pricebox{
     color: #DFBE9D;
     padding-top: 39px;
     padding-bottom: 50px;
-    margin-top: 10px !important;
           height: 256px;
           width:256px !important;
           line-height: 20px;
           border: double 5px #6F0B96;
           border-radius: 50%;
           text-align: center;
-          margin: 0px 50px;
+          margin: 10px auto;
     background-color: rgba(254, 101, 195,0.5);
           
        }
@@ -675,6 +675,7 @@ h1 {
     .timer{
       background-image: url(../img/mob.png);
       background-size: cover;
+      padding-top:72px;
     }
     #ABOUT{
         padding-top:50px;
