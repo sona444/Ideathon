@@ -309,6 +309,9 @@ h1 {
   color:#ffccff;
 }
 @media (min-width:768px){
+  .mr-logo{
+    width:175px;
+  }
   .timer{
     background-image: url(../img/web_bg.png);
   }
@@ -471,6 +474,9 @@ h1 {
   video{
     margin-top:122px !important;
     display:none;
+  }
+  .mr-logo{
+    width:100px;
   }
   .register{
     background-image: url(../img/mob.png);
@@ -636,6 +642,9 @@ h1 {
     }
     .carousel-caption p{
       font-size: 22px !important;
+    }
+    .presents{
+      font-size:20px !important;
     }
     /* .mobile.carousel-inner{
         display: block;
