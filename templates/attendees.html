@@ -32,40 +32,42 @@ th,td{
     <h1 style="margin-top:170px; text-align:center;font-weight:800; margin-bottom:50px;">Registered Candidates <i class="fas fa-users"></i></h1>
         <table class="attendees-table fold-table" style="text-align:center;">
         <thead>
-            <th style="width:10%;">Team_ID</th>
+            <th style="width:20%;">Team_ID</th>
             <th style="width:20%;">Team Name</th>
-            <th style="width:10%;">Team Members</th>
+            <th style="width:20%;">Team Members</th>
             <th style="width:20%;">Team Type</th>
-            <th style="width:40%;">Problem Statement</th>
+            <th style="width:20%;">Problem Statement</th>
         </thead>
         <tbody>
-            {% for user in users %}
-                <tr class="view">
-                    <td>{{user.id}}</td>
-                    <td>{{user.team_name}}</td>
-                    <td>{{user.team_members}}</td>
-                    <td>{{user.team_type}}</td>
-                    <td>{{user.problem_statement}}</td>
+            {% for i in range(users|length) %}
+                <tr class="view" style="background-color:rgba(162, 87, 187,0.5)">
+                    <td>{{users[i].id}}</td>
+                    <td>{{users[i].team_name}}</td>
+                    <td>{{users[i].team_members}}</td>
+                    <td>{{users[i].team_type}}</td>
+                    <td>{{users[i].problem_statement}}</td>
                 </tr>
+                <tr style="background-color:rgba(254, 101, 195,0.5);">
+                    <th>Participant name</th><th>Participant Email</th><th>Participant Phone Number</th><th>Organization</th><th>Is Leader</th>
+                </tr>
+                {% for j in range(0,users[i].team_members|int) %}
+                    <tr style="background-color:rgba(254, 101, 195,0.5);">            
+                        <td>{{participant_name[i][j]}}</td>
+                        <td>{{participant_email[i][j]}}</td>
+                        <td>{{participant_phone[i][j]}}</td>
+                        <td>{{participant_organization[i][j]}}</td>
+                        <td>{{participant_is_leader[i][j]}}</td>
+                    </tr>
+                {% endfor %}            
                 <tr class="fold">
                     <td>
                         <div class="fold-content">
                         <table class="abso">
                             <thead>
-                            <tr>
-                                <th>Participant name</th><th>Participant Email</th><th>Participant Phone Number</th><th>Organization</th><th>Is Leader</th>
-                            </tr>
+                            
                             </thead>
                             <tbody>
-                            <tr>
-                            {% for i in range(user.team_members|int) %}
-                                <td>{{participant_name[loop.index][i]}}</td>
-                                <td>{{participant_email[loop.index][i]}}</td>
-                                <td>{{participant_phone[loop.index][i]}}</td>
-                                <td>{{participant_organization[loop.index][i]}}</td>
-                                <td>{{participant_is_leader[loop.index][i]}}</td>
-                            </tr>
-                            {% endfor %}
+                            
                             </tbody>
                         </table>
                     </div>

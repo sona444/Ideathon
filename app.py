@@ -63,7 +63,7 @@ def addteamates():
         team_member_name=[]
         team_member_email=[]
         team_member_phone=[]
-        for i in range(members):
+        for i in range(1,members):
             x=request.form.get('member_name'+str(i))
             y=request.form.get('member_email'+str(i))
             z=request.form.get('member_phone'+str(i))
@@ -80,7 +80,7 @@ def addteamates():
                     participant=participants.query.filter_by(team_name=idd).first()
                     db.session.add(participants(name=team_member_name[i], email=team_member_email[i], phone=team_member_phone[i], organization=participant.organization, team_name=teams.team_name,is_leader=False, team_id=teams.id))
                     db.session.commit()
-                    return ("true")
+                    return ("Thankyou, your registration is confirmed!")
             else:
                 return("Please fill all the fields")
     except Exception as e:
@@ -111,7 +111,7 @@ def attendees():
                     'problem_statement': u.problem_statement,
         }
         usr_list.append(usr)
-        
+        print(usr_list)
         for v in participant:
             if u.id==v.team_id:
                 m.append(v.name)
@@ -124,7 +124,7 @@ def attendees():
         participant_phone.append(o)
         participant_organization.append(p)
         participant_is_leader.append(q)
-        
+        print(participant_name)
     return render_template("attendees.html",users=usr_list, participant_name=participant_name,participant_email=participant_email,participant_phone=participant_phone,participant_organization=participant_organization,participant_is_leader=participant_is_leader)
 
 if __name__ == '__main__':

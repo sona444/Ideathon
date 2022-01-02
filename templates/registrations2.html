@@ -55,7 +55,7 @@ $(document).on('click', '#btn-register', function(e){
     member=$('#member').val();
     id=$('#idd').val()
     jsondata={"members":member,"id":id};
-    for (let i = 0; i < member; i++) {
+    for (let i = 1; i < member; i++) {
         jsondata['member_name'+i]= $('#tlname'+i).val();
         jsondata['member_email'+i]= $('#tlemail'+i).val();
         jsondata['member_phone'+i]= $('#tlphone'+i).val();
