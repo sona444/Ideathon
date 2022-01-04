@@ -29,15 +29,15 @@
         {% for i in range(1, members|int) %}
             <div class="mb-3">
                 <label for="Name" class="form-label">Team Member {{i}} Name</label>
-                <input type="text" class="form-control" id="tlname{{i-1}}" required>
+                <input type="text" class="form-control" id="tlname{{i}}" required>
             </div>
             <div class="mb-3">
               <label for="Email" class="form-label">Team Member {{i}} Email address</label>
-              <input type="email" class="form-control" id="tlemail{{i-1}}" required>
+              <input type="email" class="form-control" id="tlemail{{i}}" required>
             </div>
             <div class="mb-3">
                 <label for="Phone" class="form-label">Team Member {{i}} Phone number</label>
-                <input type="phone" class="form-control" id="tlphone{{i-1}}" required>
+                <input type="phone" class="form-control" id="tlphone{{i}}" required>
             </div>
            {% endfor %}
             
