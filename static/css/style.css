@@ -13,6 +13,10 @@ nav{
 .nav-link{
     color:#ffccff !important;
 }
+.nav-link:hover{
+  color:white !important;
+  text-decoration:underline;
+}
 .carousel-item{
     
     height: 100vh;
