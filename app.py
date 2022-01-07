@@ -71,6 +71,7 @@ def addteamates():
             team_member_email.append(y)
             team_member_phone.append(z)
         for i in range(len(team_member_name)):
+            print(team_member_name)
             if team_member_name[i] and team_member_email[i] and team_member_phone[i]:
 
                 if participants.query.filter_by(email=team_member_email[i]).first():
@@ -80,9 +81,9 @@ def addteamates():
                     participant=participants.query.filter_by(team_name=idd).first()
                     db.session.add(participants(name=team_member_name[i], email=team_member_email[i], phone=team_member_phone[i], organization=participant.organization, team_name=teams.team_name,is_leader=False, team_id=teams.id))
                     db.session.commit()
-                    return ("Thankyou, your registration is confirmed!")
             else:
                 return("Please fill all the fields")
+        return ("Thankyou, your registration is confirmed!")
     except Exception as e:
         print(e)
         return("Something went wrong")
@@ -97,12 +98,12 @@ def attendees():
     participant_phone=[]
     participant_organization=[]
     participant_is_leader=[]
-    m=[]
-    n=[]
-    o=[]
-    p=[]
-    q=[]
     for u in teams:
+        m=[]
+        n=[]
+        o=[]
+        p=[]
+        q=[]
         usr = {
                     'id': u.id,
                     'team_name': u.team_name,
@@ -112,8 +113,8 @@ def attendees():
         }
         usr_list.append(usr)
         print(usr_list)
+
         for v in participant:
-            print(v)
             if u.id==v.team_id:
                 m.append(v.name)
                 n.append(v.email)
