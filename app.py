@@ -113,6 +113,7 @@ def attendees():
         usr_list.append(usr)
         print(usr_list)
         for v in participant:
+            print(v)
             if u.id==v.team_id:
                 m.append(v.name)
                 n.append(v.email)

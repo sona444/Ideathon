@@ -37,6 +37,10 @@ footer{
     border:1px solid #ffccff;
     color: #ffccff;
 }
+.jury-mem{
+  width:33%;
+  border-radius: 50%;
+}
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
 .time {
@@ -309,6 +313,13 @@ h1 {
   color:#ffccff;
 }
 @media (min-width:768px){
+  .jmf{
+    display: flex;
+    justify-content: center;
+  }
+  .jm{
+    float:left;
+  }
   .mr-logo{
     width:175px;
   }
