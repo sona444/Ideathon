@@ -317,6 +317,17 @@ h1 {
   color:#ffccff;
 }
 @media (min-width:768px){
+  .pri{
+    font-size:25px;
+    color:#ffccff;
+    font-weight:700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pri img{
+    width:600px;
+  }
   .jmf{
     display: flex;
     justify-content: center;
@@ -351,6 +362,7 @@ h1 {
   }
     .idea-points{
         font-size:20px;
+        padding-left:50px !important;
     }
     .navbar.fixed-top{
         padding-left:100px !important;
@@ -416,8 +428,8 @@ h1 {
       position: absolute;
       width: 50% !important;
       /* height: 145px; */
-      top: 57px;
-      left: 23%;
+      top: 33px;
+      left: 21%;
     }
     .timeline {
       background-image: url(../img/web.png);
@@ -475,7 +487,7 @@ h1 {
            padding-bottom:90px !important;
          }
          .nav-link{
-           font-size:17px !important;
+           font-size:20px !important;
            font-weight: 700;
          }
          .register-form{
@@ -486,6 +498,15 @@ h1 {
         }
 }
 @media (max-width:768px){
+  .pri{
+    font-size:25px;
+    color:#ffccff;
+    font-weight:700;
+    text-align: center;
+  }
+  .pri img{
+    width:360px;
+  }
   video{
     margin-top:122px !important;
     display:none;
