@@ -105,7 +105,7 @@ def addteamates():
                     sender ='ideathonmriirs1.0@gmail.com',
                     recipients = [team_member_email[i]]
                     )
-                    msg.html = '''Congratulations!! You have successfully registered for Ideathon1.0!<br>
+                    msg.html = '''Congratulations!! You have successfully registered for <b>Ideathon1.0</b>!<br>
                     Our team will contact you shortly!<br>
                     For any query please feel free to contact us @ ideathonmriirs1.0@gmail.com <br>
                     Regards, <br>
