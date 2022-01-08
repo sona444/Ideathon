@@ -114,7 +114,6 @@ def attendees():
                     'problem_statement': u.problem_statement,
         }
         usr_list.append(usr)
-        print(usr_list)
 
         for v in participant:
             if u.id==v.team_id:
@@ -128,7 +127,6 @@ def attendees():
         participant_phone.append(o)
         participant_organization.append(p)
         participant_is_leader.append(q)
-        print(participant_name)
     return render_template("attendees.html",users=usr_list, participant_name=participant_name,participant_email=participant_email,participant_phone=participant_phone,participant_organization=participant_organization,participant_is_leader=participant_is_leader)
 
 if __name__ == '__main__':
