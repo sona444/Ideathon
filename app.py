@@ -3,12 +3,20 @@ from flask import Flask, render_template, request, redirect,url_for
 from flask_migrate import Migrate, MigrateCommand
 from flask_sqlalchemy import SQLAlchemy
 import json
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
-
+mail = Mail(app)
 app.config['SQLALCHEMY_DATABASE_URI']='postgresql://rodltdkolfkcqm:e4b03c73ecc495b993bc38805e52d3d1d04a58ce4f199a31c7a0b5241d08e9c1@ec2-3-213-76-170.compute-1.amazonaws.com:5432/d3604thenjsg37'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['DEBUG'] = True
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'ideathonmriirs1.0@gmail.com'
+app.config['MAIL_PASSWORD'] = 'mriirsideathon1.0'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 from models import participants, team
@@ -25,7 +33,7 @@ def register():
 @app.route('/registrations2/<idd>/<members>')
 def register2(members,idd):
     return render_template("registrations2.html",members=members, id=idd)
-
+   
 @app.route('/add-user', methods = ['POST','GET'])
 def addUser():
     try :
@@ -50,6 +58,15 @@ def addUser():
                 teams=team.query.filter_by(team_name=tname).first()
                 db.session.add(participants(name=tlname, email=tlemail, phone=tlphone, organization=organisation, team_name=tname,is_leader=True, team_id=teams.id))
                 db.session.commit()
+                msg = Message(
+                            'Hello',
+                            sender ='ideathonmriirs1.0@gmail.com',
+                            recipients = [tlemail]
+                            )
+                msg.html = '''Congratulations!! You have successfully registered for Ideathon1.0!<br>
+                Our team will contact you shortly!<br>
+                For any query please feel free to contact us @ ideathonmriirs1.0@gmail.com '''
+                mail.send(msg)
                 return ("true")
         else:
             return("Please fill all the fields")
@@ -83,6 +100,19 @@ def addteamates():
                     participant=participants.query.filter_by(team_name=idd).first()
                     db.session.add(participants(name=team_member_name[i], email=team_member_email[i], phone=team_member_phone[i], organization=participant.organization, team_name=teams.team_name,is_leader=False, team_id=teams.id))
                     db.session.commit()
+                    msg = Message(
+                    'Hello',
+                    sender ='ideathonmriirs1.0@gmail.com',
+                    recipients = [team_member_email[i]]
+                    )
+                    msg.html = '''Congratulations!! You have successfully registered for Ideathon1.0!<br>
+                    Our team will contact you shortly!<br>
+                    For any query please feel free to contact us @ ideathonmriirs1.0@gmail.com <br>
+                    Regards, <br>
+                    Team Ideathon1.0<br>
+                    '''
+                    mail.send(msg)
+                    return ("true")
             else:
                 return("Please fill all the fields")
         return ("Thankyou, your registration is confirmed!")
