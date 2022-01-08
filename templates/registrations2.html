@@ -23,21 +23,25 @@
     <div class="container form">
     <div class="row reg-form">
     <h1 style=" text-align:center;font-weight:800;">Register Your team members <i class="fas fa-user"></i></h1>
-        <form id="register-form" style="margin-bottom:45px;">
+        <form id="register-form" class="was-validated" style="margin-bottom:45px;">
         <input type="text" class="form-control"id="member" style="display:none;"value="{{members|int}}">
         <input type="text" class="form-control"id="idd" style="display:none;"value="{{id}}">
         {% for i in range(1, members|int) %}
             <div class="mb-3">
                 <label for="Name" class="form-label">Team Member {{i}} Name</label>
-                <input type="text" class="form-control" id="tlname{{i}}" required>
+                <input type="text" class="form-control" id="tlname{{i}}" required />
             </div>
             <div class="mb-3">
               <label for="Email" class="form-label">Team Member {{i}} Email address</label>
-              <input type="email" class="form-control" id="tlemail{{i}}" required>
+              <input type="email" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]+$" class="form-control" id="tlemail{{i}}" required />
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">Please make sure your email address is non empty and have an '@' and '.'</div>
             </div>
             <div class="mb-3">
                 <label for="Phone" class="form-label">Team Member {{i}} Phone number</label>
-                <input type="phone" class="form-control" id="tlphone{{i}}" required>
+                <input type="phone"  pattern="[6789][0-9]{9}" class="form-control" id="tlphone{{i}}" required />
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Please make sure you have entered a valid 10 digit phone number</div>
             </div>
            {% endfor %}
             

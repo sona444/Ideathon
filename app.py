@@ -42,6 +42,8 @@ def addUser():
 
             if participants.query.filter_by(email=tlemail).first():
                 return("Email ID already Exists")
+            if participants.query.filter_by(team_name=tname).first():
+                return("Team Name already taken!")
             else:
                 db.session.add(team(team_name=tname, team_members=members, team_type=teamType, problem_statement=problem_statement))
                 db.session.commit()

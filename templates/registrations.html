@@ -24,7 +24,7 @@
     <div class="container form">
     <div class="row reg-form">
     <h1 style=" text-align:center;font-weight:800;">Register Yourself <i class="fas fa-user"></i></h1>
-        <form id="register-form" style="margin-bottom:45px;">
+        <form id="register-form"  class="was-validated" style="margin-bottom:45px;">
             <label for="Education" class="form-label">Team type</label>
             <select class="form-select" id="team-type" required>
                 <option value="students">Students</option>
@@ -37,40 +37,53 @@
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
             </select>
             <div class="mb-3">
                 <label for="Name" class="form-label">Team Name</label>
-                <input type="text" class="form-control" id="tname" required>
+                <input type="text" class="form-control" id="tname" required />
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback"></div>
             </div>
             <div class="mb-3">
                 <label for="Name" class="form-label">Team Leader's Name</label>
-                <input type="text" class="form-control" id="tlname" required>
+                <input type="text" class="form-control" id="tlname" required />
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback"></div>
             </div>
             <div class="mb-3">
               <label for="Email" class="form-label">Team Leader's Email address</label>
-              <input type="email" class="form-control" id="tlemail" required>
+              <input type="email" class="form-control" id="tlemail" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]+$" required />
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">Please make sure your email address is non empty and have an '@' and '.'</div>
             </div>
             <div class="mb-3">
-                <label for="Phone" class="form-label">Team Leader's Phone number</label>
-                <input type="phone" class="form-control" id="tlphone" required>
+                <label for="phone" class="form-label">Team Leader's Phone number</label>
+                <input type="phone" pattern="[6789][0-9]{9}" class="form-control" id="tlphone" required />
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Please make sure you have entered a valid 10 digit phone number</div>
             </div>
             <div class="mb-3">
-                <label for="age" class="form-label">Organization (Please provide full name) <br>(You will require to show your ID proof on reaching the campus)</label>
-                <input type="age" class="form-control" id="organization" required>
+                <label for="organization" class="form-label">Organization (Please provide full name) <br>(You will require to show your ID proof on reaching the campus)</label>
+                <input type="text" class="form-control" id="organization" required />
             </div>
-            <label for="state" class="form-label">Please select your problem statement</label>
+            <label for="ps" class="form-label">Please select your problem statement</label>
             <select class="form-select" id="problem-statement" required>
-                <option value="1">PS-1</option>
-                <option value="2">PS-2</option>
-                <option value="3">PS-3</option>
-                <option value="4">PS-4</option>
-                <option value="5">PS-5</option>
-                <option value="6">PS-6</option>
-                <option value="7">PS-7</option>
-                <option value="8">PS-8</option>
-                <option value="9">PS-9</option>
-                <option value="10">PS-10</option>
+                <option value="1">PS-1 Smart Notice Board of smart Info display system</option>
+                <option value="2">PS-2 Digital Automatic attendance system for education campus</option>
+                <option value="3">PS-3 Automatic gardening system in college</option>
+                <option value="4">PS-4 Automatic event detection in CCTV surveillance</option>
+                <option value="5">PS-5 Identification of crime prone areas</option>
+                <option value="6">PS-6 Social Media Intelligence on individual that are suspect in crime</option>
+                <option value="7">PS-7 VOIP call tracking and tracing</option>
+                <option value="8">PS-8 Dark Web Investigations</option>
+                <option value="9">PS-9 Crypto Crimes</option>
+                <option value="10">PS-10 Cyber enabled trafficing</option>
+                <option value="11">PS-11 Violent, gambling based games addicting young ones</option>
+                <option value="12">PS-12 AI based comparison of Well Hydrographs generated using high frequency automatic water level recorders for its classification and utilisation.</option>
+                <option value="13">PS-13 Raise classroom behavior issue in real time</option>
+                <option value="14">PS-14 Course and University finder</option>
+                <option value="15">PS-15 Virtual Health assistant</option>
+                <option value="16">PS-16 GPS Monitoring for Ambulance</option>
             </select><br>
             
             
@@ -84,7 +97,6 @@
 $(document).on('click', '#btn-register', function(e){
     e.preventDefault();
     var form = $('#register-form');
-
     let teamType = $('#team-type').val();
     let members = $('#members').val();
     let tname = $('#tname').val();
@@ -114,9 +126,16 @@ $(document).on('click', '#btn-register', function(e){
       dataType: "json",
         complete: function(resp){
           $("#btn-register").prop("disabled", false); 
+          alert(members);
           if(resp.responseText=='true'){
-          alert("Team details saved, Please proceed to add further team members!");
-          window.location.href = urll;}
+            if(members==1){
+              alert("Team details saved. Thankyou!");
+            }
+            else{
+              alert("Team details saved, Please proceed to add further team members!");
+              window.location.href = urll;}
+            }
+          
           else{
             alert(resp.responseText)
           }
