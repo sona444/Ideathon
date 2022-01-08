@@ -126,7 +126,6 @@ $(document).on('click', '#btn-register', function(e){
       dataType: "json",
         complete: function(resp){
           $("#btn-register").prop("disabled", false); 
-          alert(members);
           if(resp.responseText=='true'){
             if(members==1){
               alert("Team details saved. Thankyou!");
