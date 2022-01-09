@@ -11,8 +11,8 @@
 
 <main>
 <div class="icon-bar">
-  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-  <a href="https://www.facebook.com/Ideathon10-101189622461356/" class="instagram"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.facebook.com/Ideathon10-101189622461356/" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://instagram.com/ideathon1.0?utm_medium=copy_link" class="instagram"><i class="fa fa-instagram"></i></a>
   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
 </div>
 
@@ -39,29 +39,31 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{{url_for('static', filename='img/web_bg.png')}}" alt="First slide">
-      <div class="carousel-caption d-md-block">
+      <img class="d-block d-none w-100 no" src="{{url_for('static', filename='img/front.jpeg')}}" alt="First slide">
+      <img class="d-block w-100 mo" src="{{url_for('static', filename='img/front-mob.jpeg')}}" alt="First slide">
+      <!--<div class="carousel-caption d-md-block">
       <img src="{{url_for('static',filename='img/mr.png')}}" class="mr-logo">
       <p style="font-size:50px; color:#ffccff;"><b>MANAV RACHNA INTERNATIONAL INSTITUTE OF RESEARCH AND STUDIES</b> <br><span class="presents" style="font-size:30px;">PRESENTS</span><br></p>
-        <h5 style="font-size:80px; color:#ffccff;">IDEATHON 1.0</h5>
-       <!-- <p style="font-size:50px; color:#ffccff;"><br>ON <br><b>18TH AND 19TH FEBRUARY 2022</b></p>-->
+        <h5 style="font-size:80px; color:#ffccff;">IDEATHON 1.0</h5>-->
+       <!-- <p style="font-size:50px; color:#ffccff;"><br>ON <br><b>18TH AND 19TH FEBRUARY 2022</b></p>
+    </div>-->
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 no" src="{{url_for('static', filename='img/jury.jpeg')}}" alt="Second slide">
+      <img class="d-block w-100 mo" src="{{url_for('static', filename='img/jury-mob.jpeg')}}" alt="Second slide">
+    <div class="carousel-caption d-md-block" style="top:40%;">
+        <!--<p style="font-size:50px; color:#ffccff;"><b>MANAV RACHNA INTERNATIONAL INSTITUTE OF RESEARCH AND STUDIES</b><br> <br>PRESENTS<br></p>
+        <h5 style="font-size:70px; color:#ffccff;">IDEATHON 1.0</h5>
+        <p style="font-size:50px; color:#ffccff;">GOING TO HELD ON <br><b>18TH AND 19TH FEBRUARY 2022</b></p>-->
     </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{url_for('static', filename='img/web_bg.png')}}" alt="Second slide">
+      <img class="d-block w-100" src="{{url_for('static', filename='img/priz.jpeg')}}" alt="Third slide">
     <div class="carousel-caption d-md-block" style="top:40%;">
         <!--<p style="font-size:50px; color:#ffccff;"><b>MANAV RACHNA INTERNATIONAL INSTITUTE OF RESEARCH AND STUDIES</b><br> <br>PRESENTS<br></p>
-        <h5 style="font-size:70px; color:#ffccff;">IDEATHON 1.0</h5>-->
-        <p style="font-size:50px; color:#ffccff;">GOING TO HELD ON <br><b>18TH AND 19TH FEBRUARY 2022</b></p>
-    </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{url_for('static', filename='img/web_bg.png')}}" alt="Third slide">
-    <div class="carousel-caption d-md-block" style="top:40%;">
-        <!--<p style="font-size:50px; color:#ffccff;"><b>MANAV RACHNA INTERNATIONAL INSTITUTE OF RESEARCH AND STUDIES</b><br> <br>PRESENTS<br></p>
-        <h5 style="font-size:70px; color:#ffccff;">IDEATHON 1.0</h5>-->
+        <h5 style="font-size:70px; color:#ffccff;">IDEATHON 1.0</h5>
         <p style="font-size:50px; color:#ffccff;">AT<br><b><i class="fas fa-map-marker-alt"></i> 
-        MRIIRS, SECTOR 43, FARIDABAD, <br>HARYANA-121004<br></b></p>
+        MRIIRS, SECTOR 43, FARIDABAD, <br>HARYANA-121004<br></b></p>-->
     </div>
     </div>
     <!--<div class="carousel-item">
@@ -87,34 +89,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<!-- <div id="mobilecarouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-  <div class="mobile carousel-inner">
-    <div class="mobile carousel-item active">
-      <img class="d-block w-100" src="{{url_for('static', filename='img/mobile-slider1.jpeg')}}" alt="First slide">
-      <div class="carousel-caption d-md-block">
-        <h5 style="font-size:41px; color:#E6BE4A;">IDEATHON'22</h5>
-        <p style="font-size:22px; color:#E6BE4A;">Pitch in your <b>IDEA  <i class="far fa-lightbulb"></i></b></p>
-    </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{url_for('static', filename='img/mobile-slider2.jpg')}}" alt="Second slide">
-    <div class="carousel-caption d-md-block">
-        <h5 style="font-size:41px; color:#E6BE4A;">IDEATHON'22</h5>
-        <p style="font-size:22px; color:#E6BE4A;">Pitch in your <b>IDEA  <i class="far fa-lightbulb"></i></b></p>
-    </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{url_for('static', filename='img/mobile-slider3.jpg')}}" alt="Third slide">
-    <div class="carousel-caption d-md-block">
-        <h5 style="font-size:41px; color:#E6BE4A;">IDEATHON'22</h5>
-        <p style="font-size:22px; color:#E6BE4A;">Pitch in your <b>IDEA  <i class="far fa-lightbulb"></i></b></p>
-    </div>
-    </div>
-  </div>
-</div>-->
   <section class="timer" style="background-color:black;"> 
-  <!-- <h2  class="about-title" style="font-size:50px; color:#ffccff; text-align: center;" data-aos="zoom-in-up">CLOCK IS TICKING <i class="fas fa-clock"></i></h2>-->
+   <h2  class="about-title2" style="font-size:50px; color:#ffccff; text-align: center;" data-aos="zoom-in-up">HURRY UP! <i class="fas fa-clock"></i></h2>
   <div class="container" data-aos="zoom-in-up">
     <div class="balloon white">
       <div class="star-red"></div>
@@ -152,6 +128,8 @@
       <h1 class="about-title" style="font-size:50px; color:#FFCCFF; text-align: center;font-weight:700;padding-top: 17px;"> About Ideathon'22</h1>
        <img src="{{url_for('static',filename='img/wave.png')}}" class="wave mob-wave">
       <ul class="idea-points" style="color:#dfbe90;">
+      <li>We are pleased to announce that Department of Computer Science and Engineering, FET is  organizing 1st National Level Ideathon 1.0. during 18th and 19th February, 2022 under the aegis of, MRIIRS Faridabad, India.</li>
+      <li>We, at Manav Rachna International Institute of Research and Studies, aim to spread the innovation and augmentation in the field of computing, working towards students' holistic development in our institute through teach-back sessions, workshops, events, and online competitions along with special guidance for personality development</li>
         <li>Ideathon 1.0. envisages a wider reach to the student community and
         better collaboration with the industry, in order to leverage the
     potential to find the solutions to most pressing problems of today.</li>
@@ -183,8 +161,24 @@
     
     </div> 
   </div></section>
+<section id="RULES" class="rules" >
+  <div class="container">
+  <div class="row" style="min-width: 80%; max-width: 90%; margin: auto;text-align:center;">
+    <img src="{{url_for('static',filename='img/r-h.jpg')}}" class="mr-logo">
+          <ul class="idea-points" style="color:#dfbe90;text-align:left;">
+      <li>Teams must be comprised of 1-4 people.</li>
+      <li>Members of a team can be from the same as well as different years and colleges.</li>
+        <li>All design elements, code, hardware builds, etc. for your project must be created during the event. No development may start before the actual date and time of the event. Any teams that violate this rule will be automatically disqualified.</li>
 
-  <section id=TIMELINE class="timeline">
+    <li>You are permitted to use publicly developed and openly licensed API’s and SDKs for your project.</li>
+    <li>All prizes are to be shared between all team members.</li> 
+    <li>	All team members should be present on the day of the event(online).</li> 
+<li>Teams should be made up exclusively of students who are not organizers, volunteers, judges, sponsors, or in any other privileged position at the event.</li>
+    </ul>
+  </div>
+  </div>
+  </section>
+  <section id="TIMELINE" class="timeline">
   <div class="container">
   <div class="row" style="min-width: 80%;
     max-width: 90%;
@@ -198,6 +192,24 @@
     <p class="time" data-aos="fade-left">18th Feb: Commencement of Ideathon</p>
     <p class="time" data-aos="fade-right">19th Feb: Result Declaration</p> -->
     
+
+  </div>
+  </div>
+  </section>
+  <section id="JURY" class="jury">
+  <div class="container">
+  <div class="row" style="min-width: 80%;
+    max-width: 90%;
+    margin: auto;">
+
+  </div>
+  </div>
+  </section>
+  <section id="COMMITTEE" class="committee">
+  <div class="container">
+  <div class="row" style="min-width: 80%;
+    max-width: 90%;
+    margin: auto;">
 
   </div>
   </div>

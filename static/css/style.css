@@ -504,6 +504,31 @@ h1 {
       background-size: cover !important ; 
 
     }
+    .jury {
+      background-image: url(../img/jury.png);
+      height: 111vh;
+      width: 100vw;
+      background-size: cover !important ; 
+
+    }
+    .committee {
+      background-image: url(../img/commit.png);
+      height: 111vh;
+      width: 100vw;
+      background-size: cover !important ; 
+
+    }
+    .rules {
+      background-image: url(../img/web_bg.png);
+      width: 100vw;
+      background-size: cover !important ; 
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .rules img{
+      margin:0 auto;
+      width: 403px;
+    }
     #ABOUT{
       background-image: url(../img/web_bg.png);
       background-size: cover !important;
@@ -562,6 +587,12 @@ h1 {
           padding-top: 50px;
           padding-bottom: 50px;
         }
+        .mo{
+          display: none !important;
+        }
+        .carousel-item{
+          margin-top:50px;
+        }
 }
 @media (max-width:768px){
   .pri{
@@ -617,6 +648,35 @@ h1 {
   }
   .timeline {
     background-image: url(../img/Timeline-mob.png);
+    height: 73vh;
+    width: 100vw;
+    background-size: contain !important ;
+    background-repeat: no-repeat; 
+    background-color: #040713;
+
+  }
+  .jury {
+    background-image: url(../img/jury-mobi.png);
+    height: 73vh;
+    width: 100vw;
+    background-size: contain !important ;
+    background-repeat: no-repeat; 
+    background-color: #040713;
+
+  }
+  .rules {
+    background-image: url(../img/web_bg.png);
+    width: 100vw;
+    background-size: cover !important ; 
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .rules img{
+    margin:0 auto;
+    width: 403px;
+  }
+  .committee{
+    background-image: url(../img/commi-mob.png);
     height: 73vh;
     width: 100vw;
     background-size: contain !important ;
@@ -790,5 +850,8 @@ h1 {
         margin-top:157px !important;
         background-image: url(../img/mob.png);
       background-size: cover;
+    }
+    .no{
+      display:none !important;
     }
 }
