@@ -512,11 +512,27 @@ h1 {
 
     }
     .committee {
-      background-image: url(../img/commit.png);
-      height: 111vh;
+      background-image: url(../img/web_bg.png);
       width: 100vw;
       background-size: cover !important ; 
 
+    }
+    .committee-table td{
+      background-color: #DFBD9D;
+      color: #731199;
+      text-align: center;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight:700;
+    }
+    .committee-table th{
+      text-align: center;
+      font-size: 25px;
+      color:#DFBD9D
+    }
+    .committee-table{
+      border-collapse: separate;
+      border-spacing:20px 20px;
     }
     .rules {
       background-image: url(../img/web_bg.png);
@@ -526,6 +542,10 @@ h1 {
       padding-bottom: 100px;
     }
     .rules img{
+      margin:0 auto;
+      width: 403px;
+    }
+    .committee img{
       margin:0 auto;
       width: 403px;
     }
@@ -593,6 +613,29 @@ h1 {
         .carousel-item{
           margin-top:50px;
         }
+}
+@media (max-width:1024px) and (min-width:768px){
+  .timeline {
+    background-image: url(../img/Timeline-mob.png);
+    height: 73vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-color: #040713;
+
+  }
+  .jury {
+    background-image: url(../img/jury-mobi.png);
+    height: 73vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-color: #040713;
+
+  }
+  .wave{
+    top:70px;
+  }
 }
 @media (max-width:768px){
   .pri{
@@ -675,14 +718,37 @@ h1 {
     margin:0 auto;
     width: 403px;
   }
-  .committee{
-    background-image: url(../img/commi-mob.png);
-    height: 73vh;
+  /* .committee{
+    background-image: url(../img/web_bg.png);
     width: 100vw;
     background-size: contain !important ;
     background-repeat: no-repeat; 
     background-color: #040713;
 
+  } */
+  .committee {
+    background-image: url(../img/web_bg.png);
+    width: 100vw;
+    background-size: cover !important ; 
+
+  }
+  .committee-table td{
+    background-color: #DFBD9D;
+    color: #731199;
+    text-align: center;
+    border-radius: 10px;
+    font-weight:700;
+  }
+  .committee-table th{
+    text-align: center;
+    font-size: 25px;
+    color:#DFBD9D
+  }
+  .committee-table{
+    border-collapse: separate;
+    border-spacing:10px 10px;
+    width: 100vw;
+    overflow: auto;
   }
   .pricebox{
     color: #DFBE9D;
