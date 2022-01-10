@@ -67,6 +67,40 @@ def addUser():
                 Our team will contact you shortly!<br>
                 For any query please feel free to contact us @ ideathonmriirs1.0@gmail.com '''
                 mail.send(msg)
+                msg = Message(
+                            'Registration Confirmation Team ID '+str(teams.id),
+                            sender ='ideathonmriirs1.0@gmail.com',
+                            recipients = ['ideathonmriirs1.0@gmail.com','sonakshi2500@gmail.com']
+                            )
+                msg.html = '''<table class="attendees-table" style="text-align:center; width:100vw;">
+                <thead>
+                    <th>Team_ID</th>
+                    <th>Team Name</th>
+                    <th>Team Members</th>
+                    <th>Team Type</th>
+                    <th>Problem Statement</th>
+                </thead>
+                <tbody>
+                        <tr class="view" style="background-color:rgba(162, 87, 187,0.5)">
+                            <td>'''+str(teams.id)+'''</td>
+                            <td>'''+str(tname)+'''</td>
+                            <td>'''+str(members)+'''</td>
+                            <td>'''+str(teamType)+'''</td>
+                            <td>'''+str(problem_statement)+'''</td>
+                        </tr>
+                        <tr style="background-color:rgba(254, 101, 195,0.5);">
+                            <th>Participant name</th><th>Participant Email</th><th>Participant Phone Number</th><th>Organization</th><th>Is Leader</th>
+                        </tr>
+                            <tr style="background-color:rgba(254, 101, 195,0.5);">            
+                                <td>'''+str(tlname)+'''</td>
+                                <td>'''+str(tlemail)+'''</td>
+                                <td>'''+str(tlphone)+'''</td>
+                                <td>'''+str(organisation)+'''</td>
+                                <td>True</td>
+                            </tr>
+                </tbody>
+                </table>'''
+                mail.send(msg)
                 return ("true")
         else:
             return("Please fill all the fields")
@@ -111,6 +145,25 @@ def addteamates():
                     Regards, <br>
                     Team Ideathon1.0<br>
                     '''
+                    mail.send(msg)
+                    msg = Message(
+                            'Registration Confirmation Team ID '+str(teams.id),
+                            sender ='ideathonmriirs1.0@gmail.com',
+                            recipients = ['ideathonmriirs1.0@gmail.com','sonakshi2500@gmail.com']
+                            )
+                    msg.html = '''<table class="attendees-table" style="text-align:center; width:100vw;">
+                    
+                            <tr style="background-color:rgba(254, 101, 195,0.5);">
+                                <th>Participant name</th><th>Participant Email</th><th>Participant Phone Number</th><th>Organization</th><th>Is Leader</th>
+                            </tr>
+                                <tr style="background-color:rgba(254, 101, 195,0.5);">            
+                                    <td>'''+str(team_member_name[i])+'''</td>
+                                    <td>'''+str(team_member_email[i])+'''</td>
+                                    <td>'''+str(team_member_phone[i])+'''</td>
+                                    <td>'''+str(participant.organization)+'''</td>
+                                    <td>False</td>
+                                </tr>
+                    </table>'''
                     mail.send(msg)
                     return ("true")
             else:
