@@ -383,6 +383,9 @@ h1 {
   color:#ffccff;
 }
 @media (min-width:768px){
+  .about-title2{
+    padding-top:51px;
+  }
   .pri{
     font-size:25px;
     color:#ffccff;

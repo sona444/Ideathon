@@ -59,7 +59,7 @@ def addUser():
                 db.session.add(participants(name=tlname, email=tlemail, phone=tlphone, organization=organisation, team_name=tname,is_leader=True, team_id=teams.id))
                 db.session.commit()
                 msg = Message(
-                            'Hello',
+                            'Registration Confirmation Team ID '+str(teams.id),
                             sender ='ideathonmriirs1.0@gmail.com',
                             recipients = [tlemail]
                             )
@@ -101,7 +101,7 @@ def addteamates():
                     db.session.add(participants(name=team_member_name[i], email=team_member_email[i], phone=team_member_phone[i], organization=participant.organization, team_name=teams.team_name,is_leader=False, team_id=teams.id))
                     db.session.commit()
                     msg = Message(
-                    'Hello',
+                    'Registration Confirmation Team ID '+str(teams.id),
                     sender ='ideathonmriirs1.0@gmail.com',
                     recipients = [team_member_email[i]]
                     )
