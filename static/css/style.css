@@ -541,6 +541,17 @@ h1 {
       padding-top: 100px;
       padding-bottom: 100px;
     }
+    
+    .prob {
+      background-image: url(../img/web_bg.png);
+      width: 100vw;
+      background-size: cover !important ; 
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .prob td:hover{
+      box-shadow: #DFBD9D 0px 7px 29px 0px;
+    }
     .rules img{
       margin:0 auto;
       width: 403px;
@@ -708,6 +719,14 @@ h1 {
 
   }
   .rules {
+    background-image: url(../img/web_bg.png);
+    width: 100vw;
+    background-size: cover !important ; 
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .prob {
     background-image: url(../img/web_bg.png);
     width: 100vw;
     background-size: cover !important ; 
