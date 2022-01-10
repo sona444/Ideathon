@@ -383,6 +383,15 @@ h1 {
   color:#ffccff;
 }
 @media (min-width:768px){
+  .mainn{
+    top:10% !important;
+  }
+  .mainn2{
+    margin-top:14px;
+  }
+  .mainn3{
+    display:none !important;
+  }
   .about-title2{
     padding-top:51px;
   }
@@ -647,6 +656,14 @@ h1 {
     background-color: #040713;
 
   }
+  .mainn3{
+    display:block;
+    height:100vh;
+    margin-top:37px;
+  }
+  .mainn2{
+    display:none !important;
+  }
   .wave{
     top:70px;
   }
@@ -728,7 +745,14 @@ h1 {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  
+  .mainn3{
+    display:block;
+    height:100vh;
+    margin-top:37px;
+  }
+  .mainn2{
+    display:none !important;
+  }
   .prob {
     background-image: url(../img/web_bg.png);
     width: 100vw;
