@@ -387,7 +387,11 @@ h1 {
     top:10% !important;
   }
   .mainn2{
-    margin-top:14px;
+    margin-top:5px;
+  }
+  
+  .mainn22{
+    margin-top:-60px;
   }
   .mainn3{
     display:none !important;
@@ -748,11 +752,12 @@ h1 {
   .mainn3{
     display:block;
     height:100vh;
-    margin-top:37px;
+    margin-top:22px;
   }
-  .mainn2{
+  .mainn2, .mainn22{
     display:none !important;
   }
+  
   .prob {
     background-image: url(../img/web_bg.png);
     width: 100vw;
