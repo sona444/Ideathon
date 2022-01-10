@@ -165,7 +165,6 @@ def addteamates():
                                 </tr>
                     </table>'''
                     mail.send(msg)
-                    return ("true")
             else:
                 return("Please fill all the fields")
         return ("Thankyou, your registration is confirmed!")
