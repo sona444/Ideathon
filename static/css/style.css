@@ -514,7 +514,7 @@ h1 {
       left: 21%;
     }
     .timeline {
-      background-image: url(../img/web.png);
+      background-image: url(../img/T.png);
       height: 111vh;
       width: 100vw;
       background-size: cover !important ; 
@@ -643,7 +643,7 @@ h1 {
 }
 @media (max-width:1024px) and (min-width:768px){
   .timeline {
-    background-image: url(../img/Timeline-mob.png);
+    background-image: url(../img/T-mob.png);
     height: 73vh;
     width: 100vw;
     background-position: center;
@@ -725,7 +725,7 @@ h1 {
     background-color: #03001D; */
   }
   .timeline {
-    background-image: url(../img/Timeline-mob.png);
+    background-image: url(../img/T-mob.png);
     height: 73vh;
     width: 100vw;
     background-size: contain !important ;
