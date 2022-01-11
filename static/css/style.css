@@ -644,12 +644,15 @@ h1 {
 @media (max-width:1024px) and (min-width:768px){
   .timeline {
     background-image: url(../img/T-mob.png);
-    height: 73vh;
+    height: 91vh;
     width: 100vw;
     background-position: center;
     background-repeat: no-repeat; 
     background-color: #040713;
 
+  }
+  .ab-wave{
+    display: none;
   }
   .jury {
     background-image: url(../img/jury-mobi.png);
@@ -673,6 +676,9 @@ h1 {
   }
 }
 @media (max-width:768px){
+  .ab-wave{
+    display: none;
+  }
   .pri{
     font-size:25px;
     color:#ffccff;
@@ -726,9 +732,9 @@ h1 {
   }
   .timeline {
     background-image: url(../img/T-mob.png);
-    height: 73vh;
+    height: 91vh;
     width: 100vw;
-    background-size: contain !important ;
+    background-size: cover !important ;
     background-repeat: no-repeat; 
     background-color: #040713;
 
