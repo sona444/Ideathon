@@ -34,6 +34,44 @@ def register():
 def register2(members,idd):
     return render_template("registrations2.html",members=members, id=idd)
    
+@app.route('/random1234')
+def email():
+    return render_template("email.html")
+
+@app.route('/send-email/<email>/<id>')
+def sendem(id,email):
+    try :
+        msg = Message(
+            'Idea Submission of Team ID '+str(id),
+            sender ='ideathonmriirs1.0@gmail.com',
+            recipients = [email]
+            )
+        msg.html = '''
+            <div>
+                Dear participant,<br><br>
+
+                We are pleased to recieve your registration. As a next step kindly prepare a Powerpoint Presentation(PPT) depicting your idea and methodology towards the problem statment choosen.<br>
+                We request you to please follow the following format for PPT https://www.google.com/url?q=https://docs.google.com/presentation/d/1mSjgsu5X6bqGAqKjmSSCqfbO2Xcbv3kC4BItezArJFA/edit?usp%3Dsharing&sa=D&source=editors&ust=1641926079680695&usg=AOvVaw2INB7VyjFMH7MSRZV64Ese <br>
+                <br>
+                Please Note:<br>
+                <ol>
+                <li>The given format is to be followed strictly.</li>
+                <li>Skipping any information asked in the presentation may lead to disqualification of that team.</li>
+                </ol><br>
+
+                After creation of PPT please submit the form given below:
+                https://docs.google.com/forms/d/e/1FAIpQLSc-Vwsr4z0haTHsDyha45fmgvr-pzkE02GCRCgXYAjP9hMVlA/viewform?usp=sf_link
+                <br><br>
+                Regards, <br>
+                Team Ideathon2022
+            </div>
+            '''
+        mail.send(msg)
+        return ("sent")
+    except Exception as e:
+        print(e)
+        return("Something went wrong")
+
 @app.route('/add-user', methods = ['POST','GET'])
 def addUser():
     try :
@@ -67,6 +105,7 @@ def addUser():
                             )
                 msg.html = '''Congratulations!! You have successfully registered for Ideathon1.0!<br>
                 Our team will contact you shortly!<br>
+                Please Note that the Team ID in the subject line is important for the upcoming rounds.
                 For any query please feel free to contact us @ ideathonmriirs1.0@gmail.com '''
                 mail.send(msg)
                 msg = Message(

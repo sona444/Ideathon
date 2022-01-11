@@ -1,0 +1,54 @@
+{% extends "layout/base.html" %}
+
+{% block title %} Registered teams {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style>
+.reg-form{
+    border:2px solid #DFBE9D;
+    width:50%;
+    margin:0 auto;
+    margin-top:136px;
+    padding:20px;
+    color:#DFBE9D;
+}
+</style>
+{% endblock stylesheets %}
+
+{% block body_class %} landing-page {% endblock body_class %}
+
+{% block content %}
+<section class="email">
+    <div class="container">
+        <div class="row reg-form">
+         <form id="email-form"  class="was-validated" style="margin-bottom:45px;">
+            <div class="mb-3">
+                <label for="id" class="form-label">Team ID</label>
+                <input type="number" class="form-control" id="tid" required />
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+              <label for="Email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" pattern="[a-z0-9._]+@[a-z]+\.[a-z]{2,3}" required />
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">Please make sure your email address is non empty and have an '@' and '.'</div>
+            </div>
+            <span style="width:100%;"><button type="submit" class="btn" id="btn-register">Submit</button></span>
+          </form>
+        </div>
+    </div>
+</section>
+<script>
+$(document).on('click', '#btn-register', function(e){
+    e.preventDefault();
+    var form = $('#register-form');
+    let tid = $('#tid').val();
+    let email = $('#email').val();
+    
+    let urll="http://127.0.0.1:5000/send-email/"+email+"/"+tid;
+    window.location.href = urll;
+});
+</script>
+{% endblock content %}
