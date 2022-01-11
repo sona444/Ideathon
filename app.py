@@ -48,8 +48,8 @@ def addUser():
 
         if teamType and members and tname and tlname and tlemail and tlphone and organisation and problem_statement:
 
-            if participants.query.filter_by(email=tlemail).first():
-                return("Email ID already Exists")
+            # if participants.query.filter_by(email=tlemail).first():
+            #     return("Email ID already Exists")
             if participants.query.filter_by(team_name=tname).first():
                 return("Team Name already taken!")
             else:
@@ -127,9 +127,9 @@ def addteamates():
             print(team_member_name)
             if team_member_name[i] and team_member_email[i] and team_member_phone[i]:
 
-                if participants.query.filter_by(email=team_member_email[i]).first():
-                    return("Email ID already Exists")
-                else:
+                # if participants.query.filter_by(email=team_member_email[i]).first():
+                #     return("Email ID already Exists")
+                # else:
                     teams=team.query.filter_by(team_name=idd).first()
                     participant=participants.query.filter_by(team_name=idd).first()
                     db.session.add(participants(name=team_member_name[i], email=team_member_email[i], phone=team_member_phone[i], organization=participant.organization, team_name=teams.team_name,is_leader=False, team_id=teams.id))
