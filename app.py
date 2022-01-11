@@ -47,10 +47,12 @@ def addUser():
         problem_statement = request.form.get('problemStatement')
 
         if teamType and members and tname and tlname and tlemail and tlphone and organisation and problem_statement:
-
-            # if participants.query.filter_by(email=tlemail).first():
-            #     return("Email ID already Exists")
-            if participants.query.filter_by(team_name=tname).first():
+            parti=participants.query.filter_by(email=tlemail).first()
+            te=team.query.filter_by(id=parti.team_id).first()
+            if parti and te:
+                if te.problem_statement==problem_statement:
+                    return("You have already registered for this problem statement")
+            if team.query.filter_by(team_name=tname).first():
                 return("Team Name already taken!")
             else:
                 db.session.add(team(team_name=tname, team_members=members, team_type=teamType, problem_statement=problem_statement))
