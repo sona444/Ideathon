@@ -48,8 +48,8 @@ def addUser():
 
         if teamType and members and tname and tlname and tlemail and tlphone and organisation and problem_statement:
             parti=participants.query.filter_by(email=tlemail).first()
-            te=team.query.filter_by(id=parti.team_id).first()
-            if parti and te:
+            if parti:
+                te=team.query.filter_by(id=parti.team_id).first()
                 if te.problem_statement==problem_statement:
                     return("You have already registered for this problem statement")
             if team.query.filter_by(team_name=tname).first():
