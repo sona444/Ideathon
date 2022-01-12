@@ -1,9 +1,15 @@
-import os
-from flask import Flask, render_template, request, redirect,url_for
+import os, sys, subprocess, platform
+from flask import Flask, render_template, request, redirect,url_for, make_response
 from flask_migrate import Migrate, MigrateCommand
 from flask_sqlalchemy import SQLAlchemy
 import json
 from flask_mail import Mail, Message
+# import psycopg2
+# import pgconnection
+# import pgtoexcel
+import pdfkit
+
+# config = pdfkit.configuration(wkhtmltopdf='usr/bin/bash/wkhtmltopdf')
 
 app = Flask(__name__)
 mail = Mail(app)
@@ -38,6 +44,51 @@ def register2(members,idd):
 def email():
     return render_template("email.html")
 
+@app.route('/download-it', methods=['GET'])
+def downloadd():
+    teams=team.query.all()
+    participant=participants.query.all()
+    usr_list = []
+    participant_name=[]
+    participant_email=[]
+    participant_phone=[]
+    participant_organization=[]
+    participant_is_leader=[]
+    for u in teams:
+        m=[]
+        n=[]
+        o=[]
+        p=[]
+        q=[]
+        usr = {
+                    'id': u.id,
+                    'team_name': u.team_name,
+                    'team_members': u.team_members,
+                    'team_type': u.team_type,
+                    'problem_statement': u.problem_statement,
+        }
+        usr_list.append(usr)
+
+        for v in participant:
+            if u.id==v.team_id:
+                m.append(v.name)
+                n.append(v.email)
+                o.append(v.phone)
+                p.append(v.organization)
+                q.append(v.is_leader)
+        participant_name.append(m)
+        participant_email.append(n)
+        participant_phone.append(o)
+        participant_organization.append(p)
+        participant_is_leader.append(q)
+    rendered= render_template("down.html",users=usr_list, participant_name=participant_name,participant_email=participant_email,participant_phone=participant_phone,participant_organization=participant_organization,participant_is_leader=participant_is_leader)
+    pdf=pdfkit.from_string(rendered, False)
+    response=make_response(pdf)
+    response.headers['Content-Type'] = 'application/pdf'
+    response.headers['Content-Disposition'] = 'inline; filename=output.pdf'
+    # pdfkit.from_file('templates/attendees.html', 'out.pdf')
+    return response 
+
 @app.route('/send-email/<email>/<id>')
 def sendem(id,email):
     try :
@@ -51,7 +102,7 @@ def sendem(id,email):
                 Dear participant,<br><br>
 
                 We are pleased to recieve your registration. As a next step kindly prepare a Powerpoint Presentation(PPT) depicting your idea and methodology towards the problem statment choosen.<br>
-                We request you to please follow the following format for PPT https://www.google.com/url?q=https://docs.google.com/presentation/d/1mSjgsu5X6bqGAqKjmSSCqfbO2Xcbv3kC4BItezArJFA/edit?usp%3Dsharing&sa=D&source=editors&ust=1641926079680695&usg=AOvVaw2INB7VyjFMH7MSRZV64Ese <br>
+                We request you to please follow the following format for PPT https://docs.google.com/presentation/d/1jQsCt1jc_SFMeZU-jxtCDxmUAuXybfTm4bgIgO7Unic/edit#slide=id.gd1ac72da81_0_410 <br>
                 <br>
                 Please Note:<br>
                 <ol>

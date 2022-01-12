@@ -1,0 +1,42 @@
+<section class="attendees">
+<div class="container">
+    <div class="row">
+       
+    <h1 style="margin-top:170px; text-align:center;font-weight:800; margin-bottom:50px;">Registered Candidates<i class="fas fa-users"></i></h1>
+         
+        <table class="attendees-table" style="text-align:center; width:100vw;">
+        <thead>
+            <th>Team_ID</th>
+            <th>Team Name</th>
+            <th>Team Members</th>
+            <th>Team Type</th>
+            <th>Problem Statement</th>
+        </thead>
+        <tbody>
+            {% for i in range(users|length) %}
+                <tr class="view" style="background-color:rgb(162, 87, 187)">
+                    <td>{{users[i].id}}</td>
+                    <td>{{users[i].team_name}}</td>
+                    <td>{{users[i].team_members}}</td>
+                    <td>{{users[i].team_type}}</td>
+                    <td>{{users[i].problem_statement}}</td>
+                </tr>
+                <tr style="background-color:rgba(254, 101, 195,0.5);">
+                    <th>Participant name</th><th>Participant Email</th><th>Participant Phone Number</th><th>Organization</th><th>Is Leader</th>
+                </tr>
+                {% for j in range(users[i].team_members|int+1) %}
+                    <tr style="background-color:rgb(254, 101, 195);">            
+                        <td>{{participant_name[i][j]}}</td>
+                        <td>{{participant_email[i][j]}}</td>
+                        <td>{{participant_phone[i][j]}}</td>
+                        <td>{{participant_organization[i][j]}}</td>
+                        <td>{{participant_is_leader[i][j]}}</td>
+                    </tr>
+                {% endfor %}            
+                
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+</div>
+</section>
