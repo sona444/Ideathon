@@ -744,9 +744,9 @@ h1 {
   }
   .timeline {
     background-image: url(../img/T-mob.png);
-    height: 91vh;
+    height: 62vh;
     width: 100vw;
-    background-size: cover !important ;
+    background-size: contain !important ;
     background-repeat: no-repeat; 
     background-color: #040713;
 
