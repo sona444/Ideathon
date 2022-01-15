@@ -805,7 +805,14 @@ h1 {
     background-color: #DFBD9D;
     color: #731199;
     text-align: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    font-weight:700;
+  }
+  .committee-table.probs td{
+    background-color: #DFBD9D;
+    color: #731199;
+    text-align: center;
+    border-radius: 10px; 
     font-weight:700;
   }
   .committee-table th{
@@ -814,6 +821,12 @@ h1 {
     color:#DFBD9D
   }
   .committee-table{
+    border-collapse: collapse;
+    border-spacing:10px 10px;
+    width: 100vw;
+    overflow: auto;
+  }
+  .committee-table.probs{
     border-collapse: separate;
     border-spacing:10px 10px;
     width: 100vw;
@@ -988,5 +1001,8 @@ h1 {
     }
     .no{
       display:none !important;
+    }
+    td,tr,th{
+      border:1px solid #14072C;
     }
 }

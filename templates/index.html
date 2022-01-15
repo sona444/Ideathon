@@ -10,9 +10,9 @@
 {% block content %}
 
 <main>
-<div class="icon-bar">
+<div class="icon-bar" style="z-index:100;">
   <a href="https://www.facebook.com/Ideathon10-101189622461356/" class="facebook"><i class="fa fa-facebook"></i></a>
-  <a href="https://instagram.com/ideathon1.0?utm_medium=copy_link" class="instagram"><i class="fa fa-instagram"></i></a>
+  <a href="https://instagram.com/ideathon2022?utm_medium=copy_link" class="instagram"><i class="fa fa-instagram"></i></a>
   <a href="https://www.linkedin.com/company/ideathon2022/" class="linkedin"><i class="fa fa-linkedin"></i></a>
 </div>
 
@@ -139,7 +139,23 @@
     </ul>
     </li>
     </ul>
-    
+    <h3 style="text-align:left;color:#dfbe90;">Rounds:</h3>
+    <ol class="idea-points" style="color:#dfbe90;text-align:left;">
+      <li><h4 style="text-align:left;color:#dfbe90;">Idea Submission Phase (Online Mode) : Round 1</h4>
+        <ul>
+          <li>Students need to select 1 Problem Statement from the given option.</li>
+          <li>Students need to send their solution related to the problem statement max by 4th Feb 2022.</li>
+          <li>Students need to submit their solution through googleform which will be given to them from our end.</li>
+          <li>Results for the first round will be declared on 8th Feb 2022.</li>
+        </ul> 
+      </li>
+      <li><h4 style="text-align:left;color:#dfbe90;">Finale (Online Mode) : Round 2</h4>
+        <ul>
+          <li>Shortlisted groups need to be available for the final round on 18th Feb 2022.</li>
+          <li>You need to create a prototype of your solution to the problem statement.</li>
+        </ul>
+      </li>
+    </ol>
     </div> 
   </div></section>
 <section id="RULES" class="rules" >
@@ -157,16 +173,6 @@
     <li>	All team members should be present on the day of the event(online).</li> 
 <li>Teams should be made up exclusively of students who are not organizers, volunteers, judges, sponsors, or in any other privileged position at the event.</li>
     </ul>
-<h3 style="text-align:left;color:#dfbe90;">Rounds</h3>
-    <ol class="idea-points" style="color:#dfbe90;text-align:left;">
-      <li>Idea Submission Phase (Online Mode) : Round 1
-      The team will register using the following portal. 
-      <a href="/register" style="text-decoration:none;font-weight:800;color:#dfbe90;">https://ideathon2022.herokuapp.com/registration</a>
-      After registering, In this round, the team will submit the solution in the desired format. </li>
-      <li>Finale (Online Mode) : Round 2
-      Shortlisted teams from the idea submission phase will think on prototype solutions/source codes/video presentation to the proposed problem statement. These shortlisted teams will then work on their final prototypes on the day of finale. Jury members  will evaluate their presentations/prototypes to announce the winners of the Ideathon 1.0.
-      </li>
-    </ol>
 <h3 style="text-align:left;color:#dfbe90;">Teams will be judged on the following criteria.</h3>
 <ul class="idea-points" style="text-align:left;color:#dfbe90;">
   <li>Technology</li>
@@ -213,7 +219,7 @@
     margin: auto;">
    <h1 class="about-title" style="font-size:50px; color:#FFCCFF; text-align: center;font-weight:700;padding-top: 17px;"> Problem Statements</h1>
        <img src="{{url_for('static',filename='img/wave.png')}}" class="wave mob-wave">
-     <table style="color:white;" class="committee-table" cellspacing="20px">
+     <table style="color:white;" class="committee-table probs" cellspacing="20px">
       <tr>
         <th style="width:10%">S. No.</th>
         <th>Problem Statement</th>
@@ -340,7 +346,7 @@
     max-width: 90%;
     margin: auto;">
     <img src="{{url_for('static',filename='img/com-h.png')}}" class="mr-logo">
-    <table style="color:white;" class="committee-table" cellspacing="20px">
+    <table style="width:80vw;" class="committee-table">
       <tr>
         <th>Post</th>
         <th colspan=3>Members</th>

@@ -101,18 +101,21 @@ def sendem(id,email):
             <div>
                 Dear participant,<br><br>
 
-                We are pleased to recieve your registration. As a next step kindly prepare a Powerpoint Presentation(PPT) depicting your idea and methodology towards the problem statment choosen.<br>
+                We are pleased to recieve your registration. As a next step kindly prepare a Powerpoint Presentation(PPT) depicting your idea and methodology towards the problem statement chosen.<br>
                 We request you to please follow the following format for PPT https://docs.google.com/presentation/d/1jQsCt1jc_SFMeZU-jxtCDxmUAuXybfTm4bgIgO7Unic/edit#slide=id.gd1ac72da81_0_410 <br>
                 <br>
                 Please Note:<br>
                 <ol>
                 <li>The given format is to be followed strictly.</li>
                 <li>Skipping any information asked in the presentation may lead to disqualification of that team.</li>
+                <li>Deadline for submission of this form is 4th Feb 2022 (Registration Closes Prelem Round ends).</li>
                 </ol><br>
 
-                After creation of PPT please submit the form given below:
+                After creation of PPT please submit the form given below:<br>
                 https://docs.google.com/forms/d/e/1FAIpQLSc-Vwsr4z0haTHsDyha45fmgvr-pzkE02GCRCgXYAjP9hMVlA/viewform?usp=sf_link
                 <br><br>
+                Join this WhatsApp Group for regular updates.<br>
+                https://chat.whatsapp.com/EYrp0PPRkvS1dK8nwUdua5<br>
                 Regards, <br>
                 Team Ideathon2022
             </div>
