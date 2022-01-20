@@ -115,7 +115,7 @@ def sendem(id,email):
                 https://docs.google.com/forms/d/e/1FAIpQLSc-Vwsr4z0haTHsDyha45fmgvr-pzkE02GCRCgXYAjP9hMVlA/viewform?usp=sf_link
                 <br><br>
                 Join this WhatsApp Group for regular updates.<br>
-                https://chat.whatsapp.com/EYrp0PPRkvS1dK8nwUdua5<br>
+                https://chat.whatsapp.com/BWv3VBGviCsHGHMa08TNff<br>
                 Regards, <br>
                 Team Ideathon2022
             </div>
