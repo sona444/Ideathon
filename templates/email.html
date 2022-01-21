@@ -47,7 +47,7 @@ $(document).on('click', '#btn-register', function(e){
     let tid = $('#tid').val();
     let email = $('#email').val();
     
-    let urll="http://127.0.0.1:5000/send-email/"+email+"/"+tid;
+    let urll="https://ideathon2022.herokuapp.com/send-email/"+email+"/"+tid;
     window.location.href = urll;
 });
 </script>
