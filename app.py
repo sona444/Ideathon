@@ -92,10 +92,11 @@ def downloadd():
 @app.route('/send-email/<email>/<id>')
 def sendem(id,email):
     try :
+        emails=list(email.split(','))
         msg = Message(
             'Idea Submission of Team ID '+str(id),
             sender ='ideathonmriirs1.0@gmail.com',
-            recipients = [email]
+            recipients = emails
             )
         msg.html = '''
             <div>
