@@ -4,12 +4,8 @@ from flask_migrate import Migrate, MigrateCommand
 from flask_sqlalchemy import SQLAlchemy
 import json
 from flask_mail import Mail, Message
-# import psycopg2
-# import pgconnection
-# import pgtoexcel
 import pdfkit
 
-# config = pdfkit.configuration(wkhtmltopdf='usr/bin/bash/wkhtmltopdf')
 
 app = Flask(__name__)
 mail = Mail(app)
@@ -109,7 +105,7 @@ def sendem(id,email):
                 <ol>
                 <li>The given format is to be followed strictly.</li>
                 <li>Skipping any information asked in the presentation may lead to disqualification of that team.</li>
-                <li>Deadline for submission of this form is 4th Feb 2022 (Registration Closes Prelem Round ends).</li>
+                <li>Deadline for submission of this form is 6th Feb 2022 (Registration Closes Prelem Round ends).</li>
                 </ol><br>
 
                 After creation of PPT please submit the form given below:<br>
