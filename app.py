@@ -28,13 +28,13 @@ from models import participants, team
 def index():
     return render_template("index.html")
 
-@app.route('/registration')
-def register():
-    return render_template("registrations.html")
+# @app.route('/registration')
+# def register():
+#     return render_template("registrations.html")
 
-@app.route('/registrations2/<idd>/<members>')
-def register2(members,idd):
-    return render_template("registrations2.html",members=members, id=idd)
+# @app.route('/registrations2/<idd>/<members>')
+# def register2(members,idd):
+#     return render_template("registrations2.html",members=members, id=idd)
    
 @app.route('/random1234')
 def email():
